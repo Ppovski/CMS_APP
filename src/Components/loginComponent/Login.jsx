@@ -5,16 +5,9 @@ import { Segment, Icon, Input } from 'semantic-ui-react'
 import {
     Link
 } from "react-router-dom";
-
-
 const Login = (props) => {
-
-
-
     const [email, setLoginEmail] = useState('');
     const [password, setPassword] = useState('');
-
-
 
     const LoginClick = (event) => {
         event.preventDefault();
@@ -26,29 +19,22 @@ const Login = (props) => {
             return
         }
         alert("user didn't not long in");
-
     }
-
-
     return (
         <div>
             <img
                 src="image/background.png"
                 style={{ position: "fixed", width: "100%", height: "auto" }}
-
             />
-
             <Grid>
                 <Grid.Column>
                     <Segment style={{ marginLeft: "35%", marginTop: "5%", marginRight: "35%" }}>
-
                         <Form onSubmit={LoginClick}>
                             <Grid.Column style={{ display: "flex", justifyContent: "center" }} >
                                 <Icon name="user circle" size="massive" style={{ color: "#0d689f" }} />
                             </Grid.Column>
                             <h3 style={{ display: "flex", justifyContent: "center" }}>Log In</h3>
                             <Segment>
-
                                 <label>Email:
                         <Input
                                         style={{ display: "flex" }}
@@ -60,7 +46,6 @@ const Login = (props) => {
                                         <input />
                                         <Icon name='at' />
                                     </Input>
-
                                 </label>
                                 <label>Password
                         <Input
@@ -82,7 +67,6 @@ const Login = (props) => {
                                 <Grid.Column style={{ marginTop: "10px" }} >
                                     <span>New User? <Link to="/register" style={{ marginLeft: "5px" }}>Sign Up</Link></span>
                                 </Grid.Column>
-
                             </div>
                         </Form>
                     </Segment>
@@ -90,7 +74,6 @@ const Login = (props) => {
             </Grid>
         </div>
     )
-
 }
 
 export default Login

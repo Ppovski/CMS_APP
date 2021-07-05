@@ -44,9 +44,6 @@ const Calendar = (props) => {
     console.log(eventViewEditId)
     const getItemsList = () => localStorage.getItem("eventView") ? JSON.parse(localStorage.getItem("eventView")) : [];
 
-
-
-
     const deleteEventFromCalendar = () => {
         const eventList = getItemsList()
         const newList = eventList.filter((it) => it.id !== eventViewEditId);
@@ -56,7 +53,6 @@ const Calendar = (props) => {
         setDeleteEventOpenValidation(false)
 
     }
-
 
     const addEventSaveClick = (event) => {
         event.preventDefault();
@@ -84,7 +80,6 @@ const Calendar = (props) => {
     const editEventSaveClick = (event) => {
         const eventList = getItemsList();
         const newEventList = eventList.filter((it) => it.id !== eventViewEditId)
-
         newEventList.push({
             id: eventViewEditId,
             addEventName: eventViewName,
@@ -96,7 +91,6 @@ const Calendar = (props) => {
         setEventViewOpen(false)
         setEventList(newEventList)
     }
-
     const closeAddNewEvent = () => {
         setModalName("")
         setTextArea("")
@@ -113,8 +107,6 @@ const Calendar = (props) => {
     const deleteEventValidation = () => {
         setDeleteEventOpenValidation(true)
     };
-
-
 
 
     return (

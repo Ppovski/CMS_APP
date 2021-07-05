@@ -23,9 +23,6 @@ const Users = (props) => {
     setUsersList(newItems)
 }
 
-
-
-
   return (
     <div>
       <TopBar
@@ -77,8 +74,6 @@ const Users = (props) => {
               </Table.Body>
             </Table>
             <Button color="red" style={{  height: "40px", marginTop: "91px" }} onClick={()=>deleteUser(id)} >Delete User</Button>
-
-
           </div>
         ))}
 

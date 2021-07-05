@@ -10,10 +10,7 @@ import { Icon, Input } from 'semantic-ui-react'
 import { Checkbox } from 'semantic-ui-react'
 import { v4 as uuid4 } from 'uuid';
 
-
-
 const Register = (props) => {
-
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,10 +18,7 @@ const Register = (props) => {
     const [radio, setRadio] = useState('');
     const [checkBox, checkBoxValue] = useState('');
     const [selected, setSelectChange] = useState('');
-    // const [disable, setDisable] = useState(true)
-
  
-
     const SubmitClick = (event) => {
         event.preventDefault();
         const users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : []
@@ -55,26 +49,17 @@ const Register = (props) => {
         } else {
             alert("Password mismatch ")
         }
-
     }
 
     const hendleDropdownValue = (event , data) =>{
         if(data.value)
         setSelectChange(data.value)
     }
-
-    // const handleOnChange = (event :React.SyntheticEvent<HTMLElement, Event>, data: DropdownProps) => {
-    //     if(data.value)
-    //     setSortBy( data.value.toString());
-    //   }
-
     const registerOptions = [
         { key: 'IT', value: 'IT', text: 'IT' },
         { key: 'Administration', value: 'Administration', text: 'Administration' },
         { key: 'Accounting ', value: 'Accounting ', text: 'Accounting ' },
     ]
-
-   
 
     return (
         <div>
@@ -87,7 +72,6 @@ const Register = (props) => {
                         <Grid.Column width={7}>
                             <Segment style={{ marginLeft: "70%", marginTop: "15%", marginRight: "-70%", position: "relative", }}>
                                 <h1 style={{ display: "flex", justifyContent: "center" }}>Register</h1>
-
                                 <Form onSubmit={SubmitClick}>
                                     <Segment>
                                         <Input style={{ display: "flex" }}
@@ -151,7 +135,6 @@ const Register = (props) => {
                                             checked={radio === "NO"}
                                             onChange={() => setRadio("NO")}
                                         />
-
                                         <Select 
                                             placeholder='Select your job title ' 
                                             options={registerOptions}
@@ -159,8 +142,6 @@ const Register = (props) => {
                                             value={selected}
                                             onChange={hendleDropdownValue}
                                         />
-                                        {/* Select options={options} value={sortBy} selection onChange={handleOnChange}
-      /> */}
                                         <Container style={{ marginTop: "10px" }}>
                                             <Checkbox label={<label>Admin</label>}
                                                 value="Admin"

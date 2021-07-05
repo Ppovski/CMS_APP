@@ -9,12 +9,9 @@ const TopBar = (props) => {
   }
   const currentUser = JSON.parse(localStorage.currentUser)
   return (
-
     <div>
-  
       <Menu color="blue" inverted style={{ borderRadius: "0", marginTop: "0" , height:"46px"}}>
         <Menu.Menu position='right'>
-          
           <Menu.Item name='user'>
             {currentUser.checkBox}
           </Menu.Item>
@@ -34,7 +31,6 @@ const TopBar = (props) => {
               </Menu.Item>
         </Menu.Menu>
       </Menu>
-
     </div>
   )
 }

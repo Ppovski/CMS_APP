@@ -1,10 +1,8 @@
 import React from 'react'
 import {  Button,  Modal } from 'semantic-ui-react'
-
 import { Grid, Icon } from 'semantic-ui-react'
 import "react-datepicker/dist/react-datepicker.css";
 import "./calendarDatePicker.css";
-
 
 const DeleteValidation = (props) => {
     console.log(props)

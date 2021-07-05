@@ -1,11 +1,8 @@
 import React from 'react'
 import { Grid, Segment, Image } from 'semantic-ui-react'
-import "./admin.css"
 import { Link } from 'react-router-dom'
 import SideBar from "../../navigationBar/sideBar"
 import TopBar from '../../navigationBar/topBar'
-
-
 
 const Dashboard = (props) => {
     const LogOut = () => {
@@ -20,10 +17,8 @@ const Dashboard = (props) => {
     const Users = () => {
         props.history.push("users");
     }
-
     return (
         <div>
-
             < SideBar
                 EventCalendar={EventCalendar}
                 Users={Users}

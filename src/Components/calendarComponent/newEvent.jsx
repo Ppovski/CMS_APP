@@ -5,8 +5,6 @@ import { Grid, Segment,  Icon } from 'semantic-ui-react'
 import "react-datepicker/dist/react-datepicker.css";
 import Moment from 'moment';
 
-
-
 const NewEvent = (props) => {
     return (
         <div>
@@ -39,7 +37,6 @@ const NewEvent = (props) => {
                                     }
                                     }
                                     minDate={Moment().toDate()}
-
                                 />
                             </Grid.Column>
                             <Grid.Column>
