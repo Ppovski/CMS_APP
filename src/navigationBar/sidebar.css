@@ -1,0 +1,13 @@
+.sidebar .item.content.active.ui {
+    padding-bottom: 15px !important;
+}
+.admin-container{
+    margin-left:280px;
+    margin-right:20px;
+}
+
+#root > .menu:not(.sidebar){
+    margin-left:260px;
+    border-radius: 0;
+    height: 47px;
+}
