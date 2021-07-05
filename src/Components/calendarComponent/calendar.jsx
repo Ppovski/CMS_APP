@@ -12,7 +12,6 @@ import SideBar from '../../navigationBar/sideBar';
 import TopBar from '../../navigationBar/topBar';
 
 const Calendar = (props) => {
-
     const LogOut = () => {
         props.history.push("/");
     }
